@@ -8,4 +8,4 @@
 
 I use this repos to storage some very small/learning pet projects projects:
 
-- (Online Marketplace - freecodecamp)[https://youtu.be/ZxMB6Njs3ck]
+- [Online Marketplace - freecodecamp](https://youtu.be/ZxMB6Njs3ck)
