@@ -6,6 +6,6 @@
     <image src="nothing.gif">
 </div>
 
-I use this repos to storage some very small/learning pet projects projects:
+I use this repos to storage some very small/learning projects:
 
 - [Online Marketplace - freecodecamp](https://youtu.be/ZxMB6Njs3ck)
