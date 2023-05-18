@@ -86,4 +86,27 @@ describe('App e2e tests', () => {
       });
     });
   });
+
+  describe('Note', () => {
+    describe('Create', () => {
+      it('should success', () => {
+      });
+    });
+
+    describe('Information', () => {
+      it('should success', () => {
+      });
+    });
+
+    describe('Update', () => {
+      it('should success', () => {
+      });
+    });
+
+    describe('Delete', () => {
+      it('should success', () => {
+      });
+    });
+  });
+
 });
