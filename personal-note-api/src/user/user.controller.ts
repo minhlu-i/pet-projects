@@ -7,7 +7,7 @@ import { User } from '@prisma/client';
 export class UserController {
   @UseGuards(JwtGuard)
   @Get()
-  async index(@GetUser() user: User) {
+  async getInformation(@GetUser() user: User) {
     return user;
   }
 }

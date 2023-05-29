@@ -33,10 +33,7 @@ export class AuthService {
       return user;
     } catch (error) {
       if (error.code == 'P2002') {
-        console.log(
-          '🚀 ~ file: auth.service.ts:33 ~ AuthService ~ register ~ error:',
-          error,
-        );
+        console.log('🚀 ~ file: auth.service.ts:33 ~ AuthService ~ register ~ error:', error);
         throw new ForbiddenException('register_error');
       }
     }
@@ -47,19 +44,13 @@ export class AuthService {
       const user = await this.prismaService.user.findUniqueOrThrow({
         where: { email: loginData.email },
       });
-      const isMatchedPassword = await argon.verify(
-        user.hashed_password,
-        loginData.password,
-      );
+      const isMatchedPassword = await argon.verify(user.hashed_password, loginData.password);
       if (!isMatchedPassword) {
         throw new ForbiddenException('login_error');
       }
       return { token: await this.convertToJwtString(user.id, user.email) };
     } catch (error) {
-      console.log(
-        '🚀 ~ file: auth.service.ts:52 ~ AuthService ~ login ~ error:',
-        error,
-      );
+      console.log('🚀 ~ file: auth.service.ts:52 ~ AuthService ~ login ~ error:', error);
       if (error.code == 'P2025') {
         throw new ForbiddenException('login_error');
       }

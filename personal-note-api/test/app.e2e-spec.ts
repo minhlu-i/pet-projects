@@ -28,7 +28,7 @@ describe('App e2e tests', () => {
     app.close();
   });
 
-  describe('Auth', () => {
+  describe('Auth - ', () => {
     describe('Register', () => {
       it('should success', () => {
         return pactum
@@ -75,38 +75,29 @@ describe('App e2e tests', () => {
     });
   });
 
-  describe('User', () => {
+  describe("User's ", () => {
     describe('Information', () => {
       it('should success', () => {
-        return pactum
-          .spec()
-          .get(`${BASE_URL}/user`)
-          .withBearerToken('$S{token}')
-          .expectStatus(200);
+        return pactum.spec().get(`${BASE_URL}/user`).withBearerToken('$S{token}').expectStatus(200);
       });
+    });
+
+    describe('Notes', () => {
+      it('should success', () => {});
     });
   });
 
-  describe('Note', () => {
+  describe('Note - ', () => {
     describe('Create', () => {
-      it('should success', () => {
-      });
-    });
-
-    describe('Information', () => {
-      it('should success', () => {
-      });
+      it('should success', () => {});
     });
 
     describe('Update', () => {
-      it('should success', () => {
-      });
+      it('should success', () => {});
     });
 
     describe('Delete', () => {
-      it('should success', () => {
-      });
+      it('should success', () => {});
     });
   });
-
 });

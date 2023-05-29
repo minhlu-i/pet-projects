@@ -7,13 +7,7 @@ import { NoteModule } from './note/note.module';
 import { PrismaModule } from './prisma/prisma.module';
 
 @Module({
-  imports: [
-    ConfigModule.forRoot({ isGlobal: true }),
-    AuthModule,
-    UserModule,
-    NoteModule,
-    PrismaModule,
-  ],
+  imports: [ConfigModule.forRoot({ isGlobal: true }), AuthModule, UserModule, NoteModule, PrismaModule],
   controllers: [],
   providers: [],
 })
